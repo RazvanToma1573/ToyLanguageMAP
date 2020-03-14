@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="mainGridPane" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGuiDialog">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <BorderPane GridPane.rowIndex="2">
+         <center>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="ProgramStates">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="programStatesTextField" alignment="TOP_LEFT" editable="false" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+      <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <center>
+            <TableView fx:id="heapTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="addressColumn" prefWidth="75.0" text="address" />
+                <TableColumn fx:id="heapValueColumn" prefWidth="75.0" text="value" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <Label text="Heap Table" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <center>
+            <ListView fx:id="outListView" prefHeight="200.0" prefWidth="200.0" />
+         </center>
+         <top>
+            <Label text="Out List" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <center>
+            <ListView fx:id="fileTableListView" prefHeight="200.0" prefWidth="200.0" />
+         </center>
+         <top>
+            <Label text="File Table" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <BorderPane GridPane.rowIndex="3">
+         <center>
+            <ListView fx:id="identifiersListView" onMouseClicked="#mouseClickID" prefHeight="200.0" prefWidth="200.0" />
+         </center>
+         <top>
+            <Label text="ID list" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <center>
+            <TableView fx:id="symbolTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" editable="true" prefWidth="75.0" text="name" />
+                <TableColumn fx:id="symbolValueColumn" editable="true" prefWidth="75.0" text="value" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <Label text="Symbol Table" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <center>
+            <ListView fx:id="stackListView" prefHeight="200.0" prefWidth="200.0" />
+         </center>
+         <top>
+            <Label text="Stack" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <BorderPane GridPane.rowIndex="4">
+         <center>
+            <Button fx:id="runButton" alignment="CENTER" mnemonicParsing="false" onAction="#runButtonClicked" text="Run" textAlignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
